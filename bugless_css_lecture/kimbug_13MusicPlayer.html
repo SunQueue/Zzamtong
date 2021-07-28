@@ -8,43 +8,50 @@
 	<!-- link 자꾸 까먹는다. -->
 </head>
 <body>
-	<!-- CSS파일에 근거하여, ul, li를 활용한 것으로 보이기 때문에 table로 작성한 초안을 지우고, ul를 활용하도록 하겠음. -->
-	<ul class="music-player">
+	<ol class="music-player">
 		<li class="music-play-item">
-			<!-- 노래 1 -->
-			<audio src="#">
-			<!-- 뭔가 해당 부분을 누르면 재생되게 하고 싶은데 이거 맞나? -->
-				<li>
-					<div class="music-album-cover">
-						<img src="https://m.media-amazon.com/images/I/814Rp76DidL._SS500_.jpg" alt="thumbnail">
-					</div>
-				</li>
-				<li class="music-info">
-					<h1><strong>러브 엑스 마키나 Love Ex Machina</strong></h1>
-					<span>MLSL (밀레니엄 살롱)</span>
-				</li>
-				<li class="music-playtime">
-					04:09
-				</li>
-			</audio>
+			<img src="https://m.media-amazon.com/images/I/814Rp76DidL._SS500_.jpg" 
+				 alt="러브 엑스 마키나" 
+				 lang ="ko" 
+				 class="music-album-cover" >
+			<div class="music-info">
+				<div class="music-info-detail">
+				<h1>
+				<span lang="ko">러브 엑스 마키나</span>
+				Love Ex Machina
+			</h1>
+			<strong>MLSL (밀레니엄 살롱)</strong>
+			</div>
+			<span>
+				<span class="sr-only">Duration</span>
+				04:09
+			</span>
+			</div>
+			<audio src="../music-1.mp3" class="music-audio"></audio>	
 		</li>
+		
 		<li class="music-play-item">
-			<!-- 노래 1 -->
-			<audio src="#">
-			<!-- 뭔가 해당 부분을 누르면 재생되게 하고 싶은데 이거 맞나? -->
-				<li class="music-album-cover">
-					<img src="http://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/660/591/80660591_1560403300605_1_600x600.JPG" alt="thumbnail">
-				</li>
-				<li class="music-info">
-					<h1><strong>올라가</strong></h1>
-					<span>권선홍</span>
-				</li>
-				<li class="music-playtime">
-					03:33
-				</li>
-			</audio>
+			<img 
+src="http://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/660/591/80660591_1560403300605_1_600x600.JPG" 
+				 alt="올라가" 
+				 lang ="ko" 
+				 class="music-album-cover" >
+			<div class="music-info">
+				<div class="music-info-detail">
+				<h1>
+				<span lang="ko">올라가</span>
+			</h1>
+			<strong>권선홍</strong>
+			</div>
+			<span>
+				<span class="sr-only">Duration</span>
+				03:33
+			</span>
+			</div>
+			<audio src="../music-2.mp3" class="music-audio"></audio>	
 		</li>
-	</ul>
+	</ol>
+	
 	<script src="./app.js"></script>
 </body>
 </html>
