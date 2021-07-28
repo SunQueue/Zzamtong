@@ -8,50 +8,43 @@
 	<!-- link 자꾸 까먹는다. -->
 </head>
 <body>
-	<table>
-		<thead class="sr-only">
-			<tr>
-				<!-- tr의 용도가 뭐야? -> row 등신아. 행없이 표만들래?-->
-				<th>Thumbnail</th>
-				<th>Music</th>
-				<th>Playtime</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-			<!-- 1행 -->
-				<td><!-- 썸네일 -->
-					<img src="https://m.media-amazon.com/images/I/814Rp76DidL._SS500_.jpg" alt="">
-				</td>
-				<td><!-- 제목-작사가 -->
-					<dl>
-					<!-- 이거 또 까먹음 등신 -->
-						<dt>러브 엑스 마키나 Love Ex Machina</dt>
-						<dd>MLSL (밀레니엄 살롱)</dd>
-					</dl>
-				</td>
-				<td><!-- 재생시간 -->
+	<!-- CSS파일에 근거하여, ul, li를 활용한 것으로 보이기 때문에 table로 작성한 초안을 지우고, ul를 활용하도록 하겠음. -->
+	<ul class="music-player">
+		<li class="music-play-item">
+			<!-- 노래 1 -->
+			<audio src="#">
+			<!-- 뭔가 해당 부분을 누르면 재생되게 하고 싶은데 이거 맞나? -->
+				<li>
+					<div class="music-album-cover">
+						<img src="https://m.media-amazon.com/images/I/814Rp76DidL._SS500_.jpg" alt="thumbnail">
+					</div>
+				</li>
+				<li class="music-info">
+					<h1><strong>러브 엑스 마키나 Love Ex Machina</strong></h1>
+					<span>MLSL (밀레니엄 살롱)</span>
+				</li>
+				<li class="music-playtime">
 					04:09
-				</td>
-			</tr>
-			<tr>
-			<!-- 2행 -->
-				<td><!-- 썸네일 -->
-					<img src="http://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/660/591/80660591_1560403300605_1_600x600.JPG" alt="">
-				</td>
-				<td><!-- 제목-작사가 -->
-					<dl>
-					<!-- 이거 또 까먹음 등신 -->
-						<dt>올라가</dt>
-						<dd>권선홍</dd>
-					</dl>
-				</td>
-				<td><!-- 재생시간 -->
+				</li>
+			</audio>
+		</li>
+		<li class="music-play-item">
+			<!-- 노래 1 -->
+			<audio src="#">
+			<!-- 뭔가 해당 부분을 누르면 재생되게 하고 싶은데 이거 맞나? -->
+				<li class="music-album-cover">
+					<img src="http://image.genie.co.kr/Y/IMAGE/IMG_ARTIST/080/660/591/80660591_1560403300605_1_600x600.JPG" alt="thumbnail">
+				</li>
+				<li class="music-info">
+					<h1><strong>올라가</strong></h1>
+					<span>권선홍</span>
+				</li>
+				<li class="music-playtime">
 					03:33
-				</td>
-			</tr>
-		</tbody>
-	</table>
+				</li>
+			</audio>
+		</li>
+	</ul>
 	<script src="./app.js"></script>
 </body>
 </html>
