@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feed</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="feed">
+        <div class="feed-user-profile">
+            <!-- 	profile area	 -->
+            <a href="#">
+                <img scr="#" alt="profile" />
+            </a>
+            <span>
+            	<h1>
+                <!--strong, h1, dl로 할 수 있음-->
+                <a href="#">
+                    Kimbug
+                </a>
+            	</h1>
+            	<span aria-label="posted 30 minutes ago">
+                30 min
+            </span>
+            </span>
+            <form action="" method="GET">
+                <!--user가 누르면 반응하는 대상은 button이 적당함-->
+                <button type="submit">Follow</button>
+            </form>
+
+        </div>
+        <div class="feed-content">
+            <!-- 	text	 -->
+            <p>
+                The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands
+                at the cradle of true art and true science. — Albert Einstein"
+            </p>
+        </div>
+        <div class="feed-footer">
+        <!-- 	likes and comment
+		겉으로 보면 text이나, user가 눌렀을 때 뭔가 기능을 수행하는 친구이기 때문에
+		button으로 보는 것이 적합.
+		-->
+            <button type="button">10 Likes</button>
+            <button type="button">0 Comments</button>
+		</div>
+		<!-- div 가 아래 form 문을 포함하는가 아닌가에 따라 0 Comment 버튼을 누름에 따라 textarea가 나오는가 아닌가가 결정이 됨. 신중한 div 구분이 필요 -->
+			<!--User의 input 값이 많다고 판단될 경우 
+			GET 보다는 POST를 사용하는 것을 권장-->
+			<form action="" method="POST" class="feed-comment">
+				<!-- input은 한줄정도 입력받을때 사용하고
+				그 이상 입력 받을 시에는 textarea가 적합 -->
+				<textarea placeholder="Write a Comment"></textarea>
+				<button type="submit">submit</button>
+			</form>
+			
+        
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
