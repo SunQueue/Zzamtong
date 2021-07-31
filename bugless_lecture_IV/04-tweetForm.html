@@ -1,0 +1,44 @@
+<!-- section사용 : 반드시 h가 있어야한다.-->
+<section>
+	<h1>
+		what's happening?
+	</h1>
+	
+	<form action="#" method="POST">
+		<img src="#" alt="@id">
+		<textarea placeholder="What's happening?"
+				  maxlength ="280">
+		</textarea>
+		<button type="button" aria-label="upload files">
+			<!-- icon -->
+			<!-- input의 style 작업이 불가하기 때문에 별도로 만들어 주는 것 -->
+		</button>
+		<input type="file" multiple accept ="image/*, video/*">
+		<!-- multiple-> 여러개 선택 가능. 
+			image/* ; 모든 이미지 허용-->
+		<button type="button" aria-label="Search gifs">
+			<!-- icon -->
+		</button>
+		<button type="button" aria-label="Create a poll">
+			<!-- icon -->
+		</button>
+		<button type="button" aria-label="Choose Emoji">
+			<!-- icon -->
+		</button>
+		
+		<strong aria-label="0 out of 280 char">
+			<!-- 중요한정보는 strong -->
+		</strong>
+		
+		
+		<button type="button" aria-label="Add another Tweet">
+			<!-- icon -->
+		</button>
+		
+		<button type="submit" aria-label="Tweet">
+			<!-- icon -->
+			Tweet
+		</button>
+	</form>
+		
+</section>
