@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Twitter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="#" />
+	</head>
+	<body>
+		<header>
+			<h1>
+				<a href="twtter.com">
+					<img src="#" alt="Twitter" />
+				</a>
+			</h1>
+			<nav>
+				<h1>Menu</h1>
+				<!-- nav는 반드시 h 태그가 있어야한다 -->
+				<ul>
+					<li>
+						<a href="#">
+							<span>Current Page</span>
+							<!-- icon -->
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							Explore
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							<strong aria-lable=" 5 unread notifications">5</strong>
+							Notification
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							Message
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							Bookmarks
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							Lists
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<!-- icon -->
+							Profile
+						</a>
+					</li>
+					<li>
+						<button type="button">
+							<!-- icon -->
+							More
+							<!-- Dropdown -->
+						</button>
+					</li>
+				</ul>
+				<button type="button">
+					tweet
+				</button>
+			</nav>
+		</header>
+		<!-- 1개의 html문서에 1개의 main만이 올 수 있다 -->
+		<main>
+			<!-- main은 section의 elements가 아니기때문에 반드시 h태그를 써 줄 필요가 없음 -->
+			<header>
+				<h1>Home</h1>
+				<button type="button" aria-label="timeline-option">
+					<!-- icon -->
+				</button>
+				<div>
+					<!-- button dropdown -->
+					<h2>
+						home shows you top Tweets first
+					</h2>
+					<button type="button">
+						<!-- icon -->
+						<strong>
+							See latest Tweets instead
+						</strong>
+						<span>
+							You'll be switched back home after wou've been away for a while
+						</span>
+					</button>
+					<a href="#">
+						<!-- icon -->
+						View content preferences
+					</a>
+				</div>
+			</header>
+			<!-- section사용 : 반드시 h가 있어야한다.-->
+			<section>
+				<h1>
+					what's happening?
+				</h1>
+
+				<form action="#" method="POST">
+					<img src="#" alt="@id" />
+					<textarea placeholder="What's happening?" maxlength="280"> </textarea>
+					<button type="button" aria-label="upload files">
+						<!-- icon -->
+						<!-- input의 style 작업이 불가하기 때문에 별도로 만들어 주는 것 -->
+					</button>
+					<input type="file" multiple accept="image/*, video/*" />
+					<!-- multiple-> 여러개 선택 가능. 
+			image/* ; 모든 이미지 허용-->
+					<button type="button" aria-label="Search gifs">
+						<!-- icon -->
+					</button>
+					<button type="button" aria-label="Create a poll">
+						<!-- icon -->
+					</button>
+					<button type="button" aria-label="Choose Emoji">
+						<!-- icon -->
+					</button>
+
+					<strong aria-label="0 out of 280 char">
+						<!-- 중요한정보는 strong -->
+					</strong>
+
+					<button type="button" aria-label="Add another Tweet">
+						<!-- icon -->
+					</button>
+
+					<button type="submit" aria-label="Tweet">
+						<!-- icon -->
+						Tweet
+					</button>
+				</form>
+			</section>
+			<section>
+				<h1>
+					User Timeline
+				</h1>
+				<ol>
+					<li>
+						<!-- Tweet -->
+						<!-- 독립적으로 존재하고, 정보로써 완결성이 있는 경우 section 보다 article 태그를 주로 사용. 
+blog, 기사, feed 에는 article을 주로 사용-->
+						<article>
+							<h1>
+								A tweet form 김익명
+							</h1>
+							<header>
+								<a href="#"><img src="#" alt="김익명" /></a>
+								<h2><a href="#">김익명</a></h2>
+								<dl>
+									<div>
+										<dt>Username</dt>
+										<dd><a href="#">@anonymouskim</a></dd>
+									</div>
+									<div>
+										<dt>Posted</dt>
+										<dd>Dec. 25</dd>
+									</div>
+								</dl>
+								<button type="button" aria-label="options">
+									<!-- icon -->
+									<div>
+										<button type="button">
+											<!-- icon -->
+											Show less often
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Embed Tweet
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Unfollow @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Mute @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Block @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Report Tweet
+										</button>
+									</div>
+								</button>
+							</header>
+							<p>
+								영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든
+								것이 이런 식으로 망해왔다
+							</p>
+
+							<footer>
+								<button type="button">
+									<span class="sr-only">Tweet Ur reply</span>
+									<strong aria-label="3 replied">3</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">RT</span>
+									<strong aria-label="3 RTed">3</strong>
+									<div>
+										<button type="button">
+											Retweet
+										</button>
+										<button type="button">
+											Retweet with comment
+										</button>
+									</div>
+								</button>
+								<button type="button">
+									<span class="sr-only">likes</span>
+									<strong aria-label="109 liked">like this tweet</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">share</span>
+									<div>
+										<button type="button">
+											Send via Direct Message
+										</button>
+										<button type="button">
+											Add Tweet to Bookmarks
+										</button>
+										<button type="button">
+											Copy link to Tweet
+										</button>
+									</div>
+								</button>
+							</footer>
+						</article>
+					</li>
+					<li>
+						<!-- Tweet -->
+						<!-- 독립적으로 존재하고, 정보로써 완결성이 있는 경우 section 보다 article 태그를 주로 사용. 
+blog, 기사, feed 에는 article을 주로 사용-->
+						<article>
+							<h1>
+								A tweet form 김익명
+							</h1>
+							<header>
+								<a href="#"><img src="#" alt="김익명" /></a>
+								<h2><a href="#">김익명</a></h2>
+								<dl>
+									<div>
+										<dt>Username</dt>
+										<dd><a href="#">@anonymouskim</a></dd>
+									</div>
+									<div>
+										<dt>Posted</dt>
+										<dd>Dec. 25</dd>
+									</div>
+								</dl>
+								<button type="button" aria-label="options">
+									<!-- icon -->
+									<div>
+										<button type="button">
+											<!-- icon -->
+											Show less often
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Embed Tweet
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Unfollow @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Mute @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Block @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Report Tweet
+										</button>
+									</div>
+								</button>
+							</header>
+							<p>
+								영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든
+								것이 이런 식으로 망해왔다
+							</p>
+
+							<footer>
+								<button type="button">
+									<span class="sr-only">Tweet Ur reply</span>
+									<strong aria-label="3 replied">3</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">RT</span>
+									<strong aria-label="3 RTed">3</strong>
+									<div>
+										<button type="button">
+											Retweet
+										</button>
+										<button type="button">
+											Retweet with comment
+										</button>
+									</div>
+								</button>
+								<button type="button">
+									<span class="sr-only">likes</span>
+									<strong aria-label="109 liked">like this tweet</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">share</span>
+									<div>
+										<button type="button">
+											Send via Direct Message
+										</button>
+										<button type="button">
+											Add Tweet to Bookmarks
+										</button>
+										<button type="button">
+											Copy link to Tweet
+										</button>
+									</div>
+								</button>
+							</footer>
+						</article>
+					</li>
+					<li>
+						<!-- Tweet -->
+						<!-- 독립적으로 존재하고, 정보로써 완결성이 있는 경우 section 보다 article 태그를 주로 사용. 
+blog, 기사, feed 에는 article을 주로 사용-->
+						<article>
+							<h1>
+								A tweet form 김익명
+							</h1>
+							<header>
+								<a href="#"><img src="#" alt="김익명" /></a>
+								<h2><a href="#">김익명</a></h2>
+								<dl>
+									<div>
+										<dt>Username</dt>
+										<dd><a href="#">@anonymouskim</a></dd>
+									</div>
+									<div>
+										<dt>Posted</dt>
+										<dd>Dec. 25</dd>
+									</div>
+								</dl>
+								<button type="button" aria-label="options">
+									<!-- icon -->
+									<div>
+										<button type="button">
+											<!-- icon -->
+											Show less often
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Embed Tweet
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Unfollow @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Mute @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Block @anonymouskim
+										</button>
+										<button type="button">
+											<!-- icon -->
+											Report Tweet
+										</button>
+									</div>
+								</button>
+							</header>
+							<p>
+								영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든
+								것이 이런 식으로 망해왔다
+							</p>
+
+							<footer>
+								<button type="button">
+									<span class="sr-only">Tweet Ur reply</span>
+									<strong aria-label="3 replied">3</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">RT</span>
+									<strong aria-label="3 RTed">3</strong>
+									<div>
+										<button type="button">
+											Retweet
+										</button>
+										<button type="button">
+											Retweet with comment
+										</button>
+									</div>
+								</button>
+								<button type="button">
+									<span class="sr-only">likes</span>
+									<strong aria-label="109 liked">like this tweet</strong>
+								</button>
+								<button type="button">
+									<span class="sr-only">share</span>
+									<div>
+										<button type="button">
+											Send via Direct Message
+										</button>
+										<button type="button">
+											Add Tweet to Bookmarks
+										</button>
+										<button type="button">
+											Copy link to Tweet
+										</button>
+									</div>
+								</button>
+							</footer>
+						</article>
+					</li>
+				</ol>
+			</section>
+		</main>
+		<!-- 본문과의 연관성이 다소 떨어지는 대상에 대하여 aside를 주로 사용 -->
+		<aside>
+			<header>
+				<h1>
+					WorldWideTrends
+					<button type="button" aria-lable="option">
+						<!-- icon -->
+					</button>
+				</h1>
+			</header>
+			<ol>
+				<li>
+					<a href="#">
+						<span>1·Trending World Wide</span>
+						<button type="button" aria-lable="options">
+							<!-- icon -->
+							<div>
+								<button type="button">
+									<!-- icon -->
+									This trend is spem
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+							</div>
+						</button>
+						<strong>
+							JK Rowling
+						</strong>
+						<span>
+							92.7K Tweets
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>1·Trending World Wide</span>
+						<button type="button" aria-lable="options">
+							<!-- icon -->
+							<div>
+								<button type="button">
+									<!-- icon -->
+									This trend is spem
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+							</div>
+						</button>
+						<strong>
+							JK Rowling
+						</strong>
+						<span>
+							92.7K Tweets
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>1·Trending World Wide</span>
+						<button type="button" aria-lable="options">
+							<!-- icon -->
+							<div>
+								<button type="button">
+									<!-- icon -->
+									This trend is spem
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+							</div>
+						</button>
+						<strong>
+							JK Rowling
+						</strong>
+						<span>
+							92.7K Tweets
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>1·Trending World Wide</span>
+						<button type="button" aria-lable="options">
+							<!-- icon -->
+							<div>
+								<button type="button">
+									<!-- icon -->
+									This trend is spem
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+							</div>
+						</button>
+						<strong>
+							JK Rowling
+						</strong>
+						<span>
+							92.7K Tweets
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>1·Trending World Wide</span>
+						<button type="button" aria-lable="options">
+							<!-- icon -->
+							<div>
+								<button type="button">
+									<!-- icon -->
+									This trend is spem
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+								<button type="button">
+									<!-- icon -->
+								</button>
+							</div>
+						</button>
+						<strong>
+							JK Rowling
+						</strong>
+						<span>
+							92.7K Tweets
+						</span>
+					</a>
+				</li>
+				<button type="button">Show More</button>
+			</ol>
+		</aside>
+		<footer>
+	<a href="#" target="_blank">Terms</a>
+	<a href="#" target="_blank">Privacy policy</a>
+	<a href="#" target="_blank">Cookies</a>
+	<a href="#" target="_blank">Ads info</a>
+	<button type="button">
+		more
+	</button>
+	<div>
+		<a href="#" target="_blank">About</a>
+		<a href="#" target="_blank">Status</a>
+		<a href="#" target="_blank">Businesses</a>
+		<a href="#" target="_blank">Developers</a>
+	</div>
+	<span>
+		© 2019 Twitter, Inc.
+	</span>
+</footer>
+	</body>
+</html>

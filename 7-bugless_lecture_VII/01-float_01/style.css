@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+a {
+  font-size: 18px;
+  line-height: 20px;
+  color: #8492a6;
+  text-decoration: none;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+/* 본 장의 연습은 float이기 때문에 float를 활용하는 방법으로 진행.
+그러니 본 장을 구현하는데 있어 inlineblock를 활용할 수 있을 것 */
+
+ul {
+	list-style-type : none ;
+	/* ul 앞의 마크를 없애기 위함 */
+	/* ul의 경우, 앞의 마크를 위해 padding이 있기 때문에 이도 없애주어야한다. */
+	padding-left :0;
+}
+
+/*.tab-menu{
+	문제 해결 방식 1번
+	overflow : hidden;
+	 float된 자식을 찾아서 가질 수 있도록  
+}*/
+
+.tab-menu {
+	max-width : 540;
+	border-bottom : 1px solid #E5EAEF;
+	/* border은 요소로 굵기, 형태, 색상이 나와야함 */
+	background-color : white;
+}
+
+.tab-menu::after{
+	content:"";
+	display : block;
+	clear:left;
+	/* after을 사용하기 위해 content가 들어간 것이고
+	float : left로 인해 부모객체가 자식 객체를 포함하지 못하는 상황을 해결하기 위해 clear:left;를 구현한 것이고, 
+	clear의 사용을 위해서 display가 반드시 block가 되어야한다.*/
+	
+}
+
+.tab-menu-item {
+	float : left;
+	margin-right:16px;
+	/* c 
+	여기에 padding을 주는 것보다 <a>에 padding을 주는 것이 사용자 편의에 좋을 것
+	위의 앵커태그에 넣어도 뭔가 안되네 ㅋㅋ...*/
+}
+
+.tab-menu-item a {
+	display : block;
+	padding : 16px 20px;
+	/* 그런데 바로 위의 코드만 작성한 경우, padding이 위에 안먹은 것을 확인할 수 있음. 
+	원인은 <a> 코드가 inline 이기 때문에 발생한 문제. 
+	따라서 display:block;을 명시해줌*/
+}
+
+.tab-menu-item.selected a {
+	color : blue;
+	font-weight : 500;
+}
+.tab-menu-item.selected {
+	border-bottom : 2px solid blue;
+}
+
+
+
+
+
+
+
