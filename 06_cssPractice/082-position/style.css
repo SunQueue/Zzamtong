@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.02em;
+	background-color : black;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #1f2d3d;
+  line-height: 1.4545454545;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7d858f;
+  line-height: 1.5;
+}
+
+strong {
+  font-size: 22px;
+  color: #2860e1;
+  line-height: 1.0909090909;
+}
+
+strong span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #525d69;
+  line-height: 1.5;
+}
+
+button {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+#prev {
+  background-image: url(https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/position-2/templates/assets/icon-backward.svg);
+}
+
+#next {
+  background-image: url(https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/position-2/templates/assets/icon-forward.svg);
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+.card{
+	position: relative;
+	background-color : white;
+}
+.card-carousel{
+	
+}
+.card-carousel img{
+	width : 407; height 270;
+	
+	position : absolute;
+	left : -7; top -30;
+}
+.card-content{
+	position : relative;
+}
+.card-content h1{
+	position : absolute;
+	top : 12;
+	left : 16;
+	padding-bottom : 2;
+}
+.card-content span{
+	top : 46;
+	left : 16;
+}
+.card-content strong{
+	bottom : 12;
+	right : 16;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
