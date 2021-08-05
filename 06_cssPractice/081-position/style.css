@@ -17,23 +17,36 @@ h1 {
 
 /* ▼ WHERE YOUR CODE BEGINS */
 
+
 .user-card{
-	
 	width : 240px;
 	background-color : white;
+	padding : 8px 12px;
+	border : 1px solid grey;
+	border-radius : 4px;
+	/* corner-radius에서 확인 가능 */
 	
+}
+
+.user-card::after{
+	content:"";
+	display : block;
+	clear : left;
+}
+.user-photo,
+.user-name{
+	float : left
 }
 .user-photo{
-	position : static;
-	/* 뭔가 이 친구가 img의 기준점이 되어야 할 것 같은데 
-	user-card에 안올라감.*/
+	margin-right : 12px;
+	position : relative;
 }
 .user-photo img{
-	position : relative;
-	display : inline-block;
-	
+	display : block;
 	width: 40px;
 	height: 40px;
+	/* user-photo는 inline인데 반해 width와 height가 먹었음. 이는 img로 인해 가능하게 된 예외조항인것. 
+	그러나 display : block;을 명시하는 것을 권장.*/
 	border-radius : 50%;
 	/* 왜 border-radius가 안먹는거지? 
 	-> img에 안입혀서*/
@@ -45,13 +58,28 @@ h1 {
 .user-status{
 	background-color : green;
 	position: absolute;
+	/* absolute 쓰면 display는 자동으로block이 된다 
+	자신의 조상 요소 중 position이 static이 아닌 애를 기준으로 함. 그래서user-photo에 position:relative부여 */
 	bottom : 0px; right:0px;
-	/* absolute하니까 창 맨 밑 구석에 가 처박혀있음. */
-	width : 8px;
-	height : 8px;
+	/* absolute하니까 창 맨 밑 구석에 가 처박혀있음. 
+	-> .user-card가 relative 하니까 영역 안으로 들어오긴 함.*/
+	/* display : block; */
+	width : 12px;
+	height : 12px;
+	/* box-sizing: border-box;로 인해 12px처리를 하였고, 그 외곽border를 상하좌우 2px씩 주었다고 판단해서 진행 
+	width, height를 했는데 아무 변화도 없으면 display값을 변경할 것을 권장*/
 	border-radius : 50%;
+	border : 2px solid #fff;
+	
 }
 .user-name{
-	position : relative;
-	display : inline-block;
+	padding : 8px 0;
+	/* 어거지로 가운데 배치하게 하기 위함 */
 }
+/* 
+1. 전반적으로 옆으로 놓는 처리를 하는 것을 못함.
+->float의 미숙임. 
+position 사용 사례 숙지 
+- 요소를 완전히 떼내고자 할때 : abs
+- 기존의 위치에서 조금씩 이동하고자 할때 : rel
+*/
