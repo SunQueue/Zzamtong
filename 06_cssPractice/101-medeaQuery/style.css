@@ -43,80 +43,83 @@ a {
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
-/* .banner-title,
-.landing-title{
-	width : 100%;
-	height : 100vh;
+/* 모바일(작은 것)부터 확장해나가는 방식을 권장한다
+	아이폰 5(320)이 제일 작은 사이즈이기 때문에 이를 중심으로 하는 것을 권장*/
+.banner{
+	width :100%;
+	/* height : 64px; 자식의 heignt값이 정해짐에 따라 더이상 필요업게 됨 */
+	background-color :  #FFC82C;
+	/* banner전체를 밑에 붙어있게 할것이므로 */
+	position : fixed;
+	bottom : 0;
+	left : 0;
+}
+.banner-title a{
+	font-size : 18px;
+	/* 가로세로 가운데 -> flex이용 
+	ux 영역에서 <a> 영역이 확장되는 부분을 권장함.*/
 	display : flex;
 	justify-content : center;
 	align-items : center;
-} */
+	width : 100%;
+	height : 64px;
+}
+.landing{
+	/* 사이즈조정 */
+	width : 100%;
+	height : 100vh;
+	/* 글씨 양 옆에 padding */
+	padding : 0 20px;
+	/* 내용의 중앙정렬을 위한 사전작업 */
+	display : flex;
+	flex-direction : column;
+	/* 세로축을 기준으로 항상 가운데 있었으면 좋겠고, column이기 때문에 */
+	justify-content : center;
+	/* 우측배치을 하고싶기 때문에 */
+	align-items : flex-end;
+	/* 글자의 우측 정렬을 하고싶기 때문에 */
+	text-align : right;
+	
+}
+.landing-link{/* 버튼 */
+	width : 160px;
+	height : 52px;
+	font-size : 15px;
+	/* <a> 가 display : inline; 이므로 width height가 먹지 않은거임. 그래서, 
+	display block 하려가다
+	결국 이 버튼도 정렬도 해야하기때문에 flex*/
+	display : flex;
+	justify-content : center;
+	align-items : center;
+	/* 배경색 */
+	background-color : rgba(0,0,0,0.5);
+	border-radius : 16px;
+	border : 2px solid white;
+	margin-top : 24px;
+}
 
-@media screen and (min-width : 376px){
-	.banner{
-		width : 100%;
+@media screen and (min-width: 768px){
+	/* 차이점을 보이는 부분만 건들여주면됨 */
+	.banner-title a{
 		height : 80px;
-		background-color : #FFC82C;
-		display : flex;
-		flex-direction : column;
 	}
-	.banner-title{
-		text-align : center;
-		height : 100vh;
-		display : flex;
-		justify-content : center;
-		align-items : center;
-	}
-	.landing{
-		display : flex;
-		
-		width : 100%; height : 900px;
-		flex-direction : column;
-		text-align : center;
-		align-items : center;
-		flex-wrap : nowrap;
+	/* 배너의 상단고정 */
+	.banner{
+		/* 이를 구현하기 전에, bottom을 해제해야함 */
+		bottom : auto;
+		top : 0;
 	}
 	.landing-title{
-		margin-bottom : 32px;
-		/* 어떻게 하면 화면 가운데로 옮길 수 있을ㄲㅏ */
-		height : 100vh;
-		display : flex;
-		flex-wrap : wrap;
-		justify-content : center;
-		align-items : center;
+		font-size : 50px;
+		text-align : center;
 	}
 	.landing-link{
+		font-size : 18px;
 		width : 180px;
-		display : block;
-		align-items : center;
-		border-style : 2px solid white;
-		/*난 테두리를 만들고 싶었을 뿐인데 흑흑*/
-		/* 그리고 투명도조정 */
-		border-radius : 16px;
-	}
-}
-@media screen and (max-width : 375px){
-	/* 모바일의 경우 */
-	.banner{
-		position : absolute;
-		bottom : 0px;
-		background-color : #FFC82C;
-		height : 64px;
-		width : 100%;
-	}
-	.banner-title{
-		text-align : center;
+		height : 56px;
+		margin-top : 32px;
 	}
 	.landing{
-		display : flex;
-		width : 100%; height : 900px;
-		flex-direction : column;
-		text-align : right;
-		align-items : flex-end;
-		
-	}
-	.landing-title{
-		margin-bottom : 32px;
-		/* 어떻게 하면 화면 가운데로 옮길 수 있을ㄲㅏ */
+		align-items : center;
 	}
 }
