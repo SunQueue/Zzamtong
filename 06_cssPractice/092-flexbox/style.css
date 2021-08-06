@@ -32,9 +32,10 @@ p {
 	display : flex;
 	/* flex-direction : row; */
 	/* flex-wrap : nowrap; */
-	
+	justify-content : space-between;
   padding: 20px;
   background-color: #fff;
+	width : 550px;
 }
 
 
@@ -43,12 +44,9 @@ p {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
-.card-content {
-  float: left;
-}
 
 .card-content h1 {
   margin-bottom: 4px;
