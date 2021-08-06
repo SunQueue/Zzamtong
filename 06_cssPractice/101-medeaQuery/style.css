@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.landing {
+  background-image: url("https://github.com/rohjs/bugless-101/blob/master/css-basic/media-query/templates/assets/img-bg.jpg?raw=true");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.landing-title {
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.landing-title strong {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.landing-link {
+  line-height: 1;
+  color: #fff;
+}
+
+.banner-title a {
+  color: #1f2d3d;
+	font-size : 18px;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+/* .banner-title,
+.landing-title{
+	width : 100%;
+	height : 100vh;
+	display : flex;
+	justify-content : center;
+	align-items : center;
+} */
+
+@media screen and (min-width : 376px){
+	.banner{
+		width : 100%;
+		height : 80px;
+		background-color : #FFC82C;
+		display : flex;
+		flex-direction : column;
+	}
+	.banner-title{
+		text-align : center;
+		height : 100vh;
+		display : flex;
+		justify-content : center;
+		align-items : center;
+	}
+	.landing{
+		display : flex;
+		
+		width : 100%; height : 900px;
+		flex-direction : column;
+		text-align : center;
+		align-items : center;
+		flex-wrap : nowrap;
+	}
+	.landing-title{
+		margin-bottom : 32px;
+		/* 어떻게 하면 화면 가운데로 옮길 수 있을ㄲㅏ */
+		height : 100vh;
+		display : flex;
+		flex-wrap : wrap;
+		justify-content : center;
+		align-items : center;
+	}
+	.landing-link{
+		width : 180px;
+		display : block;
+		align-items : center;
+		border-style : 2px solid white;
+		/*난 테두리를 만들고 싶었을 뿐인데 흑흑*/
+		/* 그리고 투명도조정 */
+		border-radius : 16px;
+	}
+}
+@media screen and (max-width : 375px){
+	/* 모바일의 경우 */
+	.banner{
+		position : absolute;
+		bottom : 0px;
+		background-color : #FFC82C;
+		height : 64px;
+		width : 100%;
+	}
+	.banner-title{
+		text-align : center;
+	}
+	.landing{
+		display : flex;
+		width : 100%; height : 900px;
+		flex-direction : column;
+		text-align : right;
+		align-items : flex-end;
+		
+	}
+	.landing-title{
+		margin-bottom : 32px;
+		/* 어떻게 하면 화면 가운데로 옮길 수 있을ㄲㅏ */
+	}
+}
