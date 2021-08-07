@@ -1,0 +1,25 @@
+* {
+	box-sizing : border-box ;
+	margin : 0;
+}
+
+h1{
+	margin-bottom : 48px;
+}
+h3{
+	margin-bottom : 8px;
+}
+p{
+	margin-bottom : 32px;
+}
+h2{
+	margin-bottom : 24px;
+}
+.container{
+	width : 100%;
+	max-width : 736px;
+	/* 화면 사이즈가 특정 사이즈 이상이 되면 더이상 자라지 않고 지정 사이즈에서 멈추는 것 */
+	
+	margin : 0 auto;
+	padding : 48px;
+}
