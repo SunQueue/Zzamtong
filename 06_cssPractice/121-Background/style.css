@@ -3,72 +3,178 @@
 }
 
 /* ▼ WHERE YOUR CODE BEGINS */
+*{
+	box-sizing : border-box;
+	margin : 0;font : ""
+}
+.body{
+	font-family : "Poppins", sans-serif;	
+}
+.sr-only{
+	/* 어떻게 숨기냐 */
+	/* display : none;
+	display : none;시 Sr(screenrReader)에서도 읽히지 않음.
+	그래서 영역으로서 영향을 안주는 방법, position : absolute ;사용
+ */
+	position : absolute ;
+	z-index ; -100;
+	width : 1px; height : 1px;
+	overflow : hidden;
+	opacity: 0;
+}
 .card{
-	width : 840px; height : 100%;
+	width : 840px;
+	display : flex;
+	padding : 24px;
 }
 .card-image{
+	display : flex;
+	justify-content: center;
+	align-items: center;
 	width : 300px;
 	height : 200px;
 	background-image : url("https://github.com/rohjs/bugless-101/blob/master/css-basic/background/templates/assets/img-house.jpg?raw=true");
 	background-repeat : no-repeat;
+	background-position: center center;	
+	overflow : hidden;
 	background-size : cover;		
+	
 	border-radius : 6px;
-	margin-top : 28px;
+	
+	margin-right : 24px;
+	
+	position : relative;
 }
+/*.card-image.vertical img{
+	width : 100%;
+	height : auto;
+}
+.card-image.horizental img{
+	width : auto;
+	height : 100%;
+}
+.card-image{
+	width : 100%;
+	height: auto;
+	overflow: hidden;
+	튀어나온부분 숨기기
+	display: flex;
+	justify-content :center;
+	align-items : center;
+}*/
 
-.like-button{
+.card-image .like-button{
 	display : block;
 	width : 36px; height : 36px;
-	border-radius : 100%;
+	border-radius : 50%;
+	background-color : white;
+	border : none;
+	
 	background-image : url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/background/templates/assets/icon-favorite.svg");
-	background-size : 21px auto;
+	
+	background-size : 24px 24px;
 	background-repeat : no-repeat;
 	background-position : center center;
 	
-}
-.card{
-	display : flex;
+	cursor : pointer; /*타격감 증가 */
+	
+	/* 부모 기준으로 12 12간격. 
+	방법 1. position : absolute; */
+	position : absolute;
+	top : 12px;
+	left : 12px;
 }
 .card-content{
 	flex-direction : row;
 	justify-content : space-between;
 	margin-left : 20px;
 	margin-top : 28px;
+	
+	flex-grow : 1;
 }
 .plus-badge{
+	font-size : 14px;
+	line-height : ;/*20/14*/
 	background-color : #92174D;
+	display : inline-block;
+	/* padding주기 위해서 필요함 */
 	padding : 1px 8px;
 	/* padding이랑 margin구별 잘 하기 */
 	border-radius : 4px;
 	color : #FFFFFF;
 	font-weight : 500;
+	text-transform : uppercase;
+	margin-right : 6px;
+	/* 실제 템플릿에서는 8px이나, inlineblock으로 인하여 추가적인 간격이 발생하였으므로, margin-righr을 8px보다 약간 줄여줌 */
 	
 	
 }
-.plus-badge span{
+.property-type span{
+	font-size : 16px;
+	line-height : 1.25;
 	font-weight : 400;
-	color : #7D858F;
-}
-
-.card-header{
-	display : flex;
+	color : c;
 }
 .property-rate{
-	margin-left : 200px;
 	justify-content : space-around;
 	align-items : center;
 	/* 별을 세로기준 가운데 정렬 시키고 싶은데 잘 안됨. */
+	
+	font-size : 16px;
+	line-height : 1.25;
 }
-.card-title{
-	margin-top : 9px;
+.property-rate strong{
+	color : #151B26;
 	font-weight : 400;
 }
-
-.card-detail{
-	margin-top : 16px;
+.property-rate span{
 	color : #7D858F;
 }
-.sr-only{
-	/* 어떻게 숨기냐 */
+
+.property-rate::before{
+	content: '';
+	display : inline-block;
+	width : 16px;
+	height : 16px;
+	background-image: url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/background/templates/assets/icon-star.svg");
+	background-repeat: no-repeat;
+	background-position : center center;
+	background-size : contain;
 	
+	position : relative ;
+	top : 2px;
+	/* 별내리기 */
+}
+
+
+
+.card-header{
+	display : flex;
+	justify-content : space-between;
+	align-items : center;
+	margin-bottom : 8px;
+}
+.card-title{
+	font-size : 20px;
+	line-height : 1.6;
+	margin-bottom : 16px;
+	font-weight : 400;	
+}
+
+.property-detail{
+	font-size : 14px;
+	line-height : 1.1428;
+	color : #7D858F;
+}
+.property-detail dd span::after{
+	content : '•';
+	margin : 0 8px;
+	/* 마지막은 없애면 되니까... 구조자 뭐시기 사용 */
+}
+.property-detail dd span:last-child::after{
+	content : "";
+	margin : 0;
+}
+.property-detail div:first-child{
+	margin-bottom : 8px;
 }
