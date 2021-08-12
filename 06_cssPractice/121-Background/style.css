@@ -1,0 +1,74 @@
+.like-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+.card{
+	width : 840px; height : 100%;
+}
+.card-image{
+	width : 300px;
+	height : 200px;
+	background-image : url("https://github.com/rohjs/bugless-101/blob/master/css-basic/background/templates/assets/img-house.jpg?raw=true");
+	background-repeat : no-repeat;
+	background-size : cover;		
+	border-radius : 6px;
+	margin-top : 28px;
+}
+
+.like-button{
+	display : block;
+	width : 36px; height : 36px;
+	border-radius : 100%;
+	background-image : url("https://raw.githubusercontent.com/rohjs/bugless-101/cc64c9b6e3b2b5a230bd0b0507c2e2fe9ec0a2e5/css-basic/background/templates/assets/icon-favorite.svg");
+	background-size : 21px auto;
+	background-repeat : no-repeat;
+	background-position : center center;
+	
+}
+.card{
+	display : flex;
+}
+.card-content{
+	flex-direction : row;
+	justify-content : space-between;
+	margin-left : 20px;
+	margin-top : 28px;
+}
+.plus-badge{
+	background-color : #92174D;
+	padding : 1px 8px;
+	/* padding이랑 margin구별 잘 하기 */
+	border-radius : 4px;
+	color : #FFFFFF;
+	font-weight : 500;
+	
+	
+}
+.plus-badge span{
+	font-weight : 400;
+	color : #7D858F;
+}
+
+.card-header{
+	display : flex;
+}
+.property-rate{
+	margin-left : 200px;
+	justify-content : space-around;
+	align-items : center;
+	/* 별을 세로기준 가운데 정렬 시키고 싶은데 잘 안됨. */
+}
+.card-title{
+	margin-top : 9px;
+	font-weight : 400;
+}
+
+.card-detail{
+	margin-top : 16px;
+	color : #7D858F;
+}
+.sr-only{
+	/* 어떻게 숨기냐 */
+	
+}
